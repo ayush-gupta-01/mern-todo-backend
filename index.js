@@ -10,6 +10,10 @@ require("dotenv").config()
 app.use(express.json())
 app.use(cors())
 
+app.get("/", (req, res) => {
+    res.send("Hello There!");
+})
+
 app.use("/api/v1", router)
 
 const start = async () => {
